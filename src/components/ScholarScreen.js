@@ -3,6 +3,7 @@ import React from 'react';
 import Icon from 'react-native-vector-icons/FontAwesome5';
 import {Card, Button} from 'react-native-elements';
 import {createMaterialTopTabNavigator} from 'react-navigation-tabs';
+import NavigationService from './NavigationService';
 import {
   StyleSheet,
   View,
@@ -71,7 +72,45 @@ class Detail extends React.Component {
             Học Bổng Bán Phần Bậc Cử Nhân Và Thạc Sĩ Của Chính Phủ Hà Lan 2020
           </Text>
           <View style={{marginLeft: 16}}>
-            <Text   style={{ color: "#585a5e",fontSize: 16}}>#caohoc #my</Text>
+            <Text style={{color: '#585a5e', fontSize: 16}}>#caohoc #my</Text>
+          </View>
+          <View
+            style={{
+              display: 'flex',
+              flexDirection: 'row',
+              marginLeft: 16,
+              marginTop: 8,
+            }}>
+            <View style={{flex: 1}}>
+              <View style={{flexDirection: 'row', alignItems: 'center'}}>
+                <Icon name="check" size={8} style={{marginTop: 2}} />
+                <Text style={{fontSize: 16}}> Nước: Hà Lan</Text>
+              </View>
+              <View style={{flexDirection: 'row', alignItems: 'center'}}>
+                <Icon name="check" size={8} style={{marginTop: 2}} />
+                <Text style={{fontSize: 16}}> Ngành: Bất kì</Text>
+              </View>
+            </View>
+            <View style={{flex: 1}}>
+              <View style={{flexDirection: 'row', alignItems: 'center'}}>
+                <Icon name="check" size={8} style={{marginTop: 2}} />
+                <Text style={{fontSize: 16}}> Giá trị: €5,000</Text>
+              </View>
+              <View style={{flexDirection: 'row', alignItems: 'center'}}>
+                <Icon name="check" size={8} style={{marginTop: 2}} />
+                <Text style={{fontSize: 16}}> Loại: Bán phần</Text>
+              </View>
+            </View>
+          </View>
+          <View
+            style={{
+              flexDirection: 'row',
+              alignItems: 'center',
+              marginLeft: 16,
+            }}>
+            <Icon name="check" size={8} style={{marginTop: 2}} />
+
+            <Text style={{fontSize: 16}}> Đối tượng: Học sinh, sinh viên</Text>
           </View>
           <Text
             style={{
@@ -84,13 +123,13 @@ class Detail extends React.Component {
           </Text>
           <View>
             <Text style={{fontSize: 16, marginLeft: 16}}>
-              -Ngày hết hạn: 01/02/2020
+              - Ngày hết hạn: 01/02/2020
             </Text>
             <Text style={{fontSize: 16, marginLeft: 16}}>
-              -Cấp bậc: Cử nhân, Kỹ sư, thạc sĩ
+              - Cấp bậc: Cử nhân, Kỹ sư, thạc sĩ
             </Text>
             <Text style={{fontSize: 16, marginLeft: 16}}>
-              -Giới thiệu: Bạn sẽ có cơ hội nhận học bổng và được đặt chân đến
+              - Giới thiệu: Bạn sẽ có cơ hội nhận học bổng và được đặt chân đến
               đất nước Hà Lan ngay bây giờ. Đây là học bổng được trao bởi chính
               quyền Hà Lan và được tài trợ bởi Bộ giáo dục, bộ Văn hóa, bộ Khoa
               học Hà Lan. Học bổng sẽ được trao cho các học sinh sinh viên ngoài
@@ -111,21 +150,21 @@ class Detail extends React.Component {
           </Text>
           <View style={{marginLeft: 16}}>
             <Text style={{fontSize: 16}}>
-              -Du học sinh ngoài Khu vực Kinh tế châu Âu
+              - Du học sinh ngoài Khu vực Kinh tế châu Âu
             </Text>
             <Text style={{fontSize: 16}}>
-              -Ngành theo học: bất kì ngành nào có đào tạo tại các nhà tại trợ ở
-              Hà Lan
+              - Ngành theo học: bất kì ngành nào có đào tạo tại các nhà tại trợ
+              ở Hà Lan
             </Text>
             <Text style={{fontSize: 16}}>
-              -Chưa có bằng cấp tại các cơ sở giáo dục tại Hà Lan -Bạn sẽ theo
-              học Cử nhân, Kỹ sư, thạc sĩ toàn thời gian ở Hà Lan -Có yêu cầu
+              - Chưa có bằng cấp tại các cơ sở giáo dục tại Hà Lan - Bạn sẽ theo
+              học Cử nhân, Kỹ sư, thạc sĩ toàn thời gian ở Hà Lan - Có yêu cầu
               tiếng Anh
             </Text>
             <Text style={{fontSize: 16}}>
-              -Bạn sẽ theo học Cử nhân, Kỹ sư, thạc sĩ toàn thời gian ở Hà Lan
+              - Bạn sẽ theo học Cử nhân, Kỹ sư, thạc sĩ toàn thời gian ở Hà Lan
             </Text>
-            <Text style={{fontSize: 16}}>-Có yêu cầu tiếng Anh</Text>
+            <Text style={{fontSize: 16}}>- Có yêu cầu tiếng Anh</Text>
           </View>
           <Text
             style={{
@@ -138,20 +177,25 @@ class Detail extends React.Component {
           </Text>
           <View style={{marginLeft: 16}}>
             <Text style={{fontSize: 16}}>
-              -Bạn cần sự cho phép của một trong 2 điều kiện dưới đây:
+              - Bạn cần sự cho phép của một trong 2 điều kiện dưới đây:
             </Text>
             <Text style={{marginLeft: 8, fontSize: 16}}>
-              +Tham gia vào các trường đại học về Khoa học ứng dụng. Danh sách
-              tại đây
+              + Tham gia vào các trường đại học về Khoa học ứng dụng.{' '}
+              <Text style={{textDecorationLine: 'underline', color: '#000ce8'}}>
+                Danh sách tại đây
+              </Text>
             </Text>
             <Text style={{marginLeft: 8, fontSize: 16}}>
-              +Tham gia vào các trường đại học về nghiên cứu. Danh sách tại đây
+              + Tham gia vào các trường đại học về nghiên cứu.{' '}
+              <Text style={{textDecorationLine: 'underline', color: '#000ce8'}}>
+                Danh sách tại đây
+              </Text>
             </Text>
             <Text style={{fontSize: 16}}>
-              -Bảng điểm cấp 3 hoặc các cấp cao hơn
+              - Bảng điểm cấp 3 hoặc các cấp cao hơn
             </Text>
             <Text style={{fontSize: 16}}>
-              -Bằng tiếng Anh cấp độ cao nhất còn thời hạn
+              - Bằng tiếng Anh cấp độ cao nhất còn thời hạn
             </Text>
           </View>
 
@@ -322,18 +366,44 @@ const TabMaterialNavigator = createMaterialTopTabNavigator(
     },
   },
 );
-TabMaterialNavigator.navigationOptions = {
-  headerShown: false,
-};
+TabMaterialNavigator.navigationOptions = {};
 const stack = createStackNavigator({
   Detail: {
     screen: TabMaterialNavigator,
+    navigationOptions: {
+      headerStyle: {
+        backgroundColor: main_color,
+      },
+      headerTitleStyle: {
+        color: '#fff',
+      },
+
+      headerTitle: 'Thông tin học bổng',
+      headerLeft: (
+        <View style={{marginLeft: 16}}>
+          <TouchableOpacity onPress={() => NavigationService.navigate('Home')}>
+            <Icon name="arrow-circle-left" size={28} color="#fff" />
+          </TouchableOpacity>
+        </View>
+      ),
+      headerRight: (
+        <View style={{flexDirection: 'row', marginHorizontal: 8}}>
+          <Button
+            buttonStyle={{backgroundColor: 'transparent'}}
+            icon={<Icon name="envelope" size={24} color="#fff" />}
+            onPress={() => alert('aaa')}
+          />
+          <Button
+            buttonStyle={{backgroundColor: 'transparent'}}
+            icon={<Icon name="bookmark" size={24} color="#fff" />}
+            onPress={() => alert('aaa')}
+          />
+        </View>
+      ),
+    },
   },
   Apply: {
     screen: ApplyScreen,
-    navigationOptions: {
-      headerShown: false,
-    },
   },
 });
 

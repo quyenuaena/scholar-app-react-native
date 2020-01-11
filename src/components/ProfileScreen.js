@@ -65,9 +65,19 @@ export default class ProfileScreen extends React.Component {
                 flexDirection: 'row',
                 marginVertical: 4,
               }}>
+              <Icon name="birthday-cake" size={24} />
+              <Text style={{fontSize: 20, marginLeft: 8}}> 10/01/1999</Text>
+            </View>
+            <View
+              style={{
+                display: 'flex',
+                flexDirection: 'row',
+                marginVertical: 4,
+              }}>
               <Icon name="graduation-cap" size={24} />
               <Text style={{fontSize: 20, marginLeft: 8}}>Tốt nghiệp UIT</Text>
             </View>
+
             <View
               style={{
                 display: 'flex',

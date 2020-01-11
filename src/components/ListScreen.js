@@ -58,7 +58,8 @@ export default class ListScreen extends React.Component {
                   flex: 5,
                   marginLeft: 8,
                 }}>
-                <Text style={{fontSize: 18, fontWeight: 'bold'}}>
+                <Text
+                  style={{fontSize: 18, fontWeight: 'bold', marginRight: 8}}>
                   {item.tenhocbong}
                 </Text>
                 <Text style={{fontSize: 16, color: '#9a9a9c'}}>
@@ -66,10 +67,10 @@ export default class ListScreen extends React.Component {
                 </Text>
               </View>
               <View style={{flex: 0}}>
-              <TouchableOpacity>
-                <Icon name="times-circle" size={27} />
-              </TouchableOpacity>
-            </View>
+                <TouchableOpacity>
+                  <Icon name="times-circle" size={27} />
+                </TouchableOpacity>
+              </View>
             </View>
             <View
               style={{
@@ -152,7 +153,7 @@ export default class ListScreen extends React.Component {
             <View
               style={{
                 marginTop: 8,
-                marginBottom: -6,
+                marginBottom: 3,
                 alignSelf: 'center',
                 borderBottomColor: '#000',
                 borderWidth: 1,
@@ -199,8 +200,10 @@ const styles = StyleSheet.create({
     flex: 0,
   },
   card: {
-    width: width -16,
-    margin: 10,
+    width: width - 16,
+    marginBottom: 5,
+    marginTop: 5,
+    marginHorizontal: 8,
     borderRadius: 10,
     padding: 8,
     alignSelf: 'center',

@@ -146,7 +146,6 @@ const AppNavigator = createStackNavigator({
         <Button
           buttonStyle={{backgroundColor: 'transparent', marginRight: 8}}
           icon={<Icon name="cog" size={24} color="#fff" />}
-          
         />
       ),
     },
@@ -154,28 +153,7 @@ const AppNavigator = createStackNavigator({
   Scholar: {
     screen: ScholarScreen,
     navigationOptions: {
-      headerStyle: {
-        backgroundColor: main_color,
-      },
-      headerTitleStyle: {
-        color: '#fff',
-      },
-      headerBackImage: <Icon name="arrow-circle-left" size={26} color="#fff" />,
-      headerTitle: 'Thông tin học bổng',
-      headerRight: (
-        <View style={{flexDirection: 'row', marginHorizontal: 8}}>
-          <Button
-            buttonStyle={{backgroundColor: 'transparent'}}
-            icon={<Icon name="envelope" size={24} color="#fff" />}
-            onPress={() => alert('aaa')}
-          />
-          <Button
-            buttonStyle={{backgroundColor: 'transparent'}}
-            icon={<Icon name="bookmark" size={24} color="#fff" />}
-            onPress={() => alert('aaa')}
-          />
-        </View>
-      ),
+      headerShown: false,
     },
   },
   Search: {

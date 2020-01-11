@@ -30,7 +30,7 @@ const list = [
   {
     id: 'n3',
     tenhocbong:
-      'Học Bổng Toàn Phần MEXT E3 Program Bậc Thạc Sĩ Và Tiến Sĩ Đa Ngành Tại Đại Học Hokkaido 2020 ',
+      'Học Bổng MEXT E3 Program Bậc Thạc Sĩ Và Tiến Sĩ Đa Ngành Tại Đại Học Hokkaido 2020 ',
     nguon: 'Công ty FPT',
     giatri: 'Giá trị: ¥45000',
     loai: 'Loại: Toàn phần',
@@ -44,7 +44,7 @@ const list = [
   {
     id: 'n4',
     tenhocbong:
-      'Chương Trình Học Bổng Toàn Phần Bậc Thạc Sĩ Của Fulbright Vietnamese Student Program 2021-2022',
+      'Chương Trình Học Bổng Bậc Thạc Sĩ Của Fulbright Vietnamese Student Program 2021-2022',
     nguon: 'Công ty VNG',
     giatri: 'Giá trị: 10000USD',
     loai: 'Loại: Toàn phần',

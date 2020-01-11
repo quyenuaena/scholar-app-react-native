@@ -14,61 +14,8 @@ import Icon from 'react-native-vector-icons/FontAwesome5';
 import {Card} from 'react-native-elements';
 import {main_color, background_color} from '../color';
 const {width, height} = Dimensions.get('window');
-const listHB = [
-  {
-    id: 'n2',
-    tenhocbong: 'Học bổng Niềm tin',
-    nguon: 'Công ty VNG',
-    giatri: '- Giá trị: 10000 USD',
-    loai: '- Loại: Toàn phần',
-    quocgia: '- Nước: Việt Nam',
-    doituong: '- Đối tượng: Sinh viên năm 4',
-    slot: 20,
-    view: 100,
-    nganh: '-Ngành: CNTT',
-    avatar: require('../assets/vng.png'),
-  },
-  {
-    id: 'n1',
-    tenhocbong: 'Học bổng LQT',
-    nguon: 'Công ty Gameloft',
-    giatri: '- Giá trị: 10000 USD',
-    loai: '- Loại: Toàn phần',
-    quocgia: '- Nước: Việt Nam',
-    doituong: '- Đối tượng: Sinh viên năm 4',
-    slot: 20,
-    view: 100,
-    nganh: '-Ngành: CNTT - Game',
-    avatar: require('../assets/gameloft.jpg'),
-  },
-  {
-    id: 'n3',
-    tenhocbong: 'Học bổng Ước mơ',
-    nguon: 'Công ty FPT',
-    giatri: '- Giá trị: 10000 USD',
-    loai: '- Loại: Toàn phần',
-    quocgia: '- Nước: Việt Nam',
-    doituong: '- Đối tượng: Sinh viên năm 4',
-    slot: 20,
-    view: 100,
-    nganh: '-Ngành: CNTT',
-    avatar: require('../assets/fpt.png'),
-  },
-  {
-    id: 'n4',
-    tenhocbong: 'Học bổng Niềm tin 2',
-    nguon: 'Công ty VNG',
-    giatri: '- Giá trị: 99900 USD',
-    loai: '- Loại: Toàn phần',
-    quocgia: '- Nước: Việt Nam',
-    doituong: '- Đối tượng: Sinh viên năm 3, 4',
-    slot: 20,
-    view: 100,
-    nganh: '-Ngành: CNTT',
-    avatar: require('../assets/vng.png'),
-  },
-];
-
+import {list} from './data';
+const listHB = list;
 const listNHB = [
   {
     id: 'n5',
@@ -175,14 +122,34 @@ export default class HomeScreen extends React.Component {
                 marginTop: 8,
               }}>
               <View style={{flex: 1}}>
-                <Text style={{fontSize: 16}}>{item.giatri}</Text>
-                <Text style={{fontSize: 16}}>{item.loai}</Text>
-                <Text style={{fontSize: 16}}>{item.quocgia}</Text>
+                <View style={{flexDirection: 'row', alignItems: 'center'}}>
+                  <Icon name="check" size={8} style={{marginTop: 2}} />
+                  <Text style={{fontSize: 16}}> {item.quocgia}</Text>
+                </View>
+                <View style={{flexDirection: 'row', alignItems: 'center'}}>
+                  <Icon name="check" size={8} style={{marginTop: 2}} />
+                  <Text style={{fontSize: 16}}> {item.nganh}</Text>
+                </View>
               </View>
               <View style={{flex: 1}}>
-                <Text style={{fontSize: 16}}>{item.doituong}</Text>
-                <Text style={{fontSize: 16}}>{item.nganh}</Text>
+                <View style={{flexDirection: 'row', alignItems: 'center'}}>
+                  <Icon name="check" size={8} style={{marginTop: 2}} />
+                  <Text style={{fontSize: 16}}> {item.giatri}</Text>
+                </View>
+                <View style={{flexDirection: 'row', alignItems: 'center'}}>
+                  <Icon name="check" size={8} style={{marginTop: 2}} />
+                  <Text style={{fontSize: 16}}> {item.loai}</Text>
+                </View>
               </View>
+            </View>
+            <View
+              style={{
+                flexDirection: 'row',
+                alignItems: 'center',
+                marginLeft: 16,
+              }}>
+              <Icon name="check" size={8} style={{marginTop: 2}} />
+              <Text style={{fontSize: 16}}> {item.doituong}</Text>
             </View>
             <View
               style={{
